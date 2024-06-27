@@ -10,7 +10,7 @@ Translate Away is a web application that allows users to input text in one langu
 
 ## Tech Stack
 
-- **Frontend**: React, CSS
+- **Frontend**: React, TypeScript, CSS
 - **Backend**: Flask, Python
 
 ## Getting Started
