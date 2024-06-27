@@ -26,8 +26,8 @@ Translate Away is a web application that allows users to input text in one langu
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/translate-away.git
-    cd translate-away
+    git clone https://github.com/yourusername/TranslateAway.git
+    cd TranslateAway
     ```
 
 2. Set up the backend:
