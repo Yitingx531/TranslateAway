@@ -35,7 +35,7 @@ Translate Away is a web application that allows users to input text in one langu
     ```bash
     cd backend
     python -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
+    source bin/activate  # On Windows: venv\Scripts\activate
     pip install Flask flask-cors
     ```
 
