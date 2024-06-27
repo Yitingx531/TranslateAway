@@ -78,12 +78,13 @@ Translate Away is a web application that allows users to input text in one langu
 ## Screenshots
 
 ### Main Interface
-![Screenshot 2024-06-26 at 7 18 30 PM](https://github.com/Yitingx531/translate-away/assets/119069886/357af650-d30c-47e0-9adf-76f0905b0186)
+![Screenshot 2024-06-26 at 7 18 30 PM](https://github.com/Yitingx531/TranslateAway/assets/119069886/c8685f12-f904-4d7f-aa4c-141cdf8c67c4)
+
 
 
 
 ### Translation Result
-![Screenshot 2024-06-26 at 7 20 36 PM](https://github.com/Yitingx531/translate-away/assets/119069886/5482fcd0-a198-4ded-abf8-46120fa9a310)
+
 
 
 ## License
