@@ -27,6 +27,7 @@ Translate Away is a web application that allows users to input text in one langu
 
     ```bash
     git clone https://github.com/yourusername/TranslateAway.git
+    git checkout develop
     cd TranslateAway
     ```
 
