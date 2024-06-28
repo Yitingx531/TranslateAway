@@ -1,0 +1,230 @@
+body {
+    background-image: url('../public/background.jpg');
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+  align-items: center;
+  align-content: center;
+  padding: 0 2.5rem;
+}
+
+.translate-card {
+  width: 80vw;
+  max-width: 120rem;
+  margin: 1.25rem auto;
+  padding: 1.25rem;
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.translate-header {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  color: #68abb0;
+}
+
+.translate-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.language-select {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.625rem;
+  width: 100%;
+
+  select:focus {
+    outline: none;
+  }
+
+  label {
+    flex: 1;
+    margin: 0 0.625rem;
+    color: #68abb0;
+  }
+
+  select {
+    width: 100%;
+    padding: 0.3125rem;
+    border-radius: 0.25rem;
+    border: 0.0625rem solid #ddd;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #68abb0;
+  }
+}
+
+.translate-input {
+  width: 100%;
+  height: 6.25rem;
+  padding: 0.625rem;
+  margin-bottom: 0.625rem;
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.25rem;
+  resize: vertical;
+  background-color: rgba(255, 255, 255, 0.2);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.translate-button {
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #68abb0;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+.translate-result {
+  margin-top: 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    margin-bottom: 0.625rem;
+  }
+
+  p {
+    color: #e384b0;
+  }
+}
+
+.bubbles-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 1200px) {
+    flex-direction: row;
+  }
+}
+
+.cloud-bubble {
+  display: flex;
+  padding: 1.25rem;
+  border-radius: 2.5rem;
+  min-width: 2.5rem;
+  width: 50%;
+  min-height: 2.5rem;
+  margin: 2rem;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+  opacity: 0.6;
+
+  &:before,
+  &:after {
+    content: "";
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    background-color: #fff;
+  }
+
+  &.source {
+    color: #68abb0;
+
+    &:before {
+      width: 3rem;
+      height: 3rem;
+      top: -1rem;
+      left: 1.5rem;
+      box-shadow: -3rem 2rem 0 -1rem #d0f0fd;
+    }
+
+    &:after {
+      bottom: -1rem;
+      right: 1.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      box-shadow: 2.5rem -2.5rem 0 0 #d0f0fd,
+                  -1.5rem -0.5rem 0 -0.25rem #d0f0fd,
+                  -1.5rem 1.25rem 0 -0.5rem #d0f0fd,
+                  -0.5rem 1.5rem 0 -0.75rem #d0f0fd;
+    }
+  }
+
+  &.target {
+    color: #e384b0;
+
+    &:before {
+      width: 3.75rem;
+      height: 3.75rem;
+      top: -1.25rem;
+      left: 2rem;
+      box-shadow: -4rem 2.5rem 0 -1.25rem #ffe0f0;
+    }
+
+    &:after {
+      bottom: -1rem;
+      right: 2rem;
+      width: 2.75rem;
+      height: 2.75rem;
+      box-shadow: 3.75rem -3rem 0 0 #ffe0f0,
+                  -2.25rem -0.5rem 0 -0.25rem #ffe0f0,
+                  -2rem 1.5rem 0 -0.5rem #ffe0f0,
+                  -0.5rem 2rem 0 -0.75rem #ffe0f0;
+    }
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .translate-card {
+    width: 90vw;
+  }
+  .translate-input {
+    height: 5rem;
+  }
+  .cloud-bubble {
+    padding: 1rem;
+    border-radius: 2rem;
+    max-width: 18rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .translate-card {
+    width: 85vw;
+  }
+  .language-select {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .language-select label {
+    width: 100%;
+    margin: 0.625rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+      .translate-card {
+    width: 80vw;
+  }
+  .translate-input {
+    height: 4rem;
+  }
+  .cloud-bubble {
+    padding: 0.75rem;
+    border-radius: 1.5rem;
+    max-width: 16rem;
+  }
+}
