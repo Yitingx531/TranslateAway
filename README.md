@@ -85,6 +85,7 @@ Translate Away is a web application that allows users to input text in one langu
 
 
 ### Translation Result
+<img width="1506" alt="Screenshot 2024-06-27 at 9 40 40 PM" src="https://github.com/Yitingx531/TranslateAway/assets/119069886/48ddc58d-2f50-4381-8a92-4bd25cd5312f">
 
 
 
