@@ -1,13 +1,23 @@
 from flask import Flask, request, jsonify
 from translate import Translator
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  # Apply CORS to all routes
+CORS(app, resources={r"/translate": {"origins": "*"}})  # Apply CORS to all routes
 
+@app.before_request
+def before_request():
+    if request.method == 'OPTIONS':
+        return _build_cors_preflight_response()
+
+def _build_cors_preflight_response():
+    response = jsonify({'message': 'CORS preflight'})
+    response.headers.add("Access-Control-Allow-Origin", "*")
+    response.headers.add("Access-Control-Allow-Headers", "Content-Type")
+    response.headers.add("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+    return response
 
 @app.route('/translate', methods=['POST'])
-@cross_origin()  # Allow CORS for this route
 def translate():
     try:
         data = request.get_json()
@@ -29,6 +39,5 @@ def translate():
         print(f"Error during translation: {e}")
         return jsonify({'error': 'Internal server error'}), 500
 
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='127.0.0.1', port=5000)
